@@ -158,6 +158,12 @@ Projeto Marketplace
 
 Aula 01 - Projeto Marketplace header
 
-teste1.1
+Entendendo o uso do BrowserRouter no index.js 
+
+Importar o BrowserRouter
+import {BrowserRouter} from 'react-router-dom'
+
+montar estrutura
+<BrowserRouter></BrowserRouter>
 
 
