@@ -1,0 +1,161 @@
+Roteamento (react router)
+
+Aula 01 - Introducao ao React Router DOM
+
+Biblioteca externa que serve para roteamento de paginas.
+
+Gerenciamento e navegacao entre as paginas
+
+Permite aplicacao com varias se carregar as paginas
+
+
+site do react router
+https://reactrouter.com/en/main
+
+Instalando apos a criacao do app
+npx create-react-app nomedoapp
+
+npm install react-router-dom@6.4.2
+
+Aula 02 - Criacao de rotas
+
+No index do src (principal)
+Importado 3 elementos do react-router
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+Criada a estrutura para rotear as paginas
+
+ <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/login" element={<Login/>}/>
+    </Routes>
+    </BrowserRouter>
+
+    Foram importadas as duas paginas (home e login)
+    
+     
+Aula 03 - links
+
+Criado os links. da home para login e vice versa
+
+Precisa importar o Link do react
+import { Link } from 'react-router-dom'
+
+Usar a taga conforme modelo: <Link to='local/'</Link>
+
+Aula 04 - Menu e links
+
+Voltar a usar o componente App
+
+Recortadas as rotas
+
+Criacao de uma nav bar
+
+Aula 05 - Parametros de URL
+
+Criado componente products
+
+uso do useParams para acessar os parametros da rotas, na App.js
+
+Aula 06 - Query String e Pagina 404
+
+Ordernar, buscar, paginar, identificacao de paginas
+
+Acessar o valor da Query
+
+Usar o hook userSearchParams o index do Products
+
+Criacao da pagina 404
+
+Aula 07 Navigate e Rotas Aninhadas
+
+Uso do navigate no index do Register
+
+Criacao de rota Aninhada para o review do produto dentro de App.js
+
+Outlet para pegar o review do products e colocar na pagina. Chama rotas aninhadas.
+
+Criado um link para os reviews dentro pages/Products/index
+<Link to="/product/1/reviews">Link para as reviews</Link><br/>
+
+Aula 08 - State entre rotas
+
+Enviar state pelo Register
+
+no index do register 
+navigate('/products', {state: 3453453453})
+
+No index do Products o useLocation captura o estado 
+const { state } = useLocation();
+
+Enviar o estado no produto pelo link
+
+Introducao ao Taiwindcss
+
+Aula 01 - Estilizaçao no React
+
+CCS Inline
+Feito dentro do index do NavMenu
+
+CSS Modules (pouco utilizado)
+Arquivo style.module.css na pasta NavMenu
+Ele cria um escopo local do componente
+
+Styled components
+Uma Biblioteca que permite o uso estilos como componentes
+
+instalar 
+npm install --save styled-components@latest
+https://styled-components.com/
+
+https://stackoverflow.com/questions/70810819/npm-err-cannot-read-properties-of-null-reading-edgesout
+
+Tailwindcss
+Conjunto de classes utilitarias (framework) CSS
+https://tailwindcss.com/
+
+push só compila o que for usar
+
+Aula 02 - Introducao do Tailwindcss
+
+Criado um novo projeto
+
+npx create-react-app market-place-reactjs
+
+Usar o fragment, tag funcionando como generica ( <> </>)
+
+Instalar o router dom
+https://reactrouter.com/en/main
+npm install react-router-dom@6.4.2
+
+Instalar o Tailwindcss
+https://tailwindcss.com/
+npm install -D tailwindcss postcss autoprefixer
+
+configura o tailwindcss
+npx tailwindcss init -p
+
+gerar os arquivos postcss.config e o tailwindcss.config
+
+configura os templates
+colar dentro de content do arquivo tailwind.config.js
+"./src/**/*.{js,jsx,ts,tsx}",
+
+importar as diretivas do tailwindcss para o css do index principal
+colar no index.css principal 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+rodar o App
+npm start
+
+teste da class abaixo na h1 do ola
+<h1 className="text-3xl font-bold underline text-red-800">
+
+Projeto Marketplace
+
+Aula 01 - Projeto Marketplace header
+
+
