@@ -166,4 +166,60 @@ import {BrowserRouter} from 'react-router-dom'
 montar estrutura
 <BrowserRouter></BrowserRouter>
 
+Erro no clone do notebook casa
+'react-scripts' não é reconhecido como um comando interno
+comando que usei
+npm install react-scripts --save
+https://stackoverflow.com/questions/47928735/react-scripts-is-not-recognized-as-an-internal-or-external-command
+
+Extensao para montar paginas do react
+ES7+ React/Redux/R
+
+Para criar um component usa-se:
+rafce (react arrow function component export) e pressiona tab
+
+Instalar a extensao tailwindcss
+
+Criacao do NavBar em components
+
+importacao da img na NavBar
+https://undraw.co/
+
+Pegar cores
+https://flatuicolors.com/
+
+
+Aula 02 - Home - parte 1
+
+Google fonts
+Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+MontSerrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+Funcoes de diretivas do Tailwindcss
+
+Usando Layer
+Fazendo o importacao da funcoes do tailwind pra classe menu-tab
+no arquivo index.css
+
+useState para mudar a categoria selecionada
+no arquivo ProductList
+
+Uso de grid para gerar a tela de produtos
+
+Aula 03 - Home - parte 3
+
+
+
+
+
+
+
+
+
+
+
 
