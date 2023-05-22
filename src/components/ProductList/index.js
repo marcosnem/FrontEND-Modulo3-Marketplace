@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Product from "../Product";
+import productMock from "../../mock/products";
 
 const ProductList = () => {
   // variavel de estado para ativar a categoria selecionada
   const [categoriaTab, setCategoriaTab] = useState('Hamburguer');
+  const [ products, setProducts ] = useState (productMock);
+
   return (
     <section className="my-12 max-w-screen-xl mx-auto px-6">
      {/* Menu de categoria */}
@@ -15,10 +18,13 @@ const ProductList = () => {
      </div>
      {/* Lista de produtos */}
      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12'>
-        <Product/>
-        <Product/>
-        <Product/>
-    </div>
+      {/*map para varrer os itens do arrauy de produtos  */}
+      {products.map(product => (
+        //key é o identificador. Product é uma prop para enviar o iten do array para o index de Product
+         <Product key={product._id} product={product}/>
+      ))}
+       
+     </div>
     </section>
   )
 }
