@@ -1,6 +1,7 @@
 import React from 'react'
 import image from '../../assets/hamburguer.jpeg'
 
+//props product vem do  <Product key={product._id} product={product}/>, linjha 24 no ProductList 
 const Product = ( { product} ) => {
   return (
     <div className='bg-white border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative'>
