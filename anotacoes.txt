@@ -212,6 +212,53 @@ Uso de grid para gerar a tela de produtos
 
 Aula 03 - Home - parte 3
 
+Reactr Hooks
+
+Aula 01 - So explanacao
+
+Aula 02 - Use state
+
+Criacao do arquivo mokado
+
+pasta mock e arquivo product.js
+
+o arquivo productMock tem um array com product
+
+Aula 03 -  Criacao de Form e Autenticacao
+
+Form de login
+
+ <main className='h-screen w-full banner'>
+    <div className='flex flex-col items-center pt-20 h-screen'>
+        <img className='w-52' src={logo} alt='logotipo food app'/>
+        <form action='' className='b-white w-96 mt-6 p-4 rounded-lg shadow-lg'>
+           <div className='flex flex-col space-y-6'>
+            <input type="mail" placeholder="Digite seu email" name="email" className="w-full px-4 py3 rounded-lg ring-red-200 border border-gray-300 focus:outline-none transition duration-300"/>
+            <input type="password" placeholder="Digite sua senha" name="senha" className="w-full px-4 py3 rounded-lg ring-red-200 border border-gray-300 focus:outline-none transition duration-300"/>
+            </div> 
+            <button className="w-full py-3 bg-primary text-white focus:outline-none focus:ring-4 mt-6 rounded-lg transition duration-300">Entrar</button>
+            <p className="text-base text-primary text-center my-6 hover:underline cursor-pointer">Precisa de uma conta?</p>
+        </form>
+    </div>
+   </main>
+
+   Aula 04 - Manipulacao de formularios
+
+   Comportamento - form controlados
+
+   Montar a funcao para ver o estato no form
+
+   handleChangeValues para captura o teclado
+   onChange no fim do input
+
+   Criar variavel de estado para salvar
+
+
+   
+
+
+
+
 
 
 
