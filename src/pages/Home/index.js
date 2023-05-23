@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ProductList from '../../components/ProductList';
+import { AuthContext } from '../../context/AuthContext';
 
 const Home = () => {
+
+  const userLogged = useContext(AuthContext);
+  console.log(`valor do contexto na home`, userLogged);
+  
   return (
    <>
    <section className='home-banner w-full'>

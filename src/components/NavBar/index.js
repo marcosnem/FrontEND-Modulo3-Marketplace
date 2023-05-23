@@ -1,13 +1,19 @@
 import React from "react";
 import logo from "../../assets/logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+
 
 
 const NavBar = () => {
+
+  const userLogged  = useContext(AuthContext);
+  console.log(`valor do contexto no nav bar`,userLogged);
+ 
   return (
     // uso de classes do tailwindcss para estilizar
     <header className='bg-transparent z-50 w-full'>
-      <nav className='flex items-center max-w-screen-xl mx-a
- px-6 py-3' >
+      <nav className='flex items-center max-w-screen-xl mx-a px-6 py-3' >
     <div className='flex flex-grow items-center'>
         <img src={logo} alt="logo" className='w-36 cursor-pointer' />
         <h1 className='text-center text-3xl font-semibold text-gray-700'>Food App</h1>
