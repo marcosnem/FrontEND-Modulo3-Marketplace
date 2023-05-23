@@ -254,6 +254,18 @@ Form de login
    Criar variavel de estado para salvar
 
 
+
+Aula 05 - Use Context
+
+Instancia de contexto criada na pasta contexto
+
+O contexto torna a variavel compartilhada para todos que estiverem dentro de sua tag
+
+
+
+
+
+
    
 
 
