@@ -7,7 +7,7 @@ const Login = () => {
   const [ inputValues, setInputValues ] = useState ({
     email: '',
     senha:''
-  })
+  });
   
   // para redirecionar a pagina
   const navigate = useNavigate(); 
