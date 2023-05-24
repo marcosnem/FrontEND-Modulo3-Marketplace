@@ -259,7 +259,11 @@ Aula 05 - Use Context
 
 Instancia de contexto criada na pasta contexto
 
-O contexto torna a variavel compartilhada para todos que estiverem dentro de sua tag
+O contexto torna a variavel compartilhada para todos que estiverem dentro de sua tag (AuthProvider) vai ter acesso ao values
+
+Aula 06  - Fetch post login
+
+
 
 
 
