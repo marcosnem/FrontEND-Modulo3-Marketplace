@@ -324,6 +324,31 @@ npm install react-icons --save
 
 Ajusta no NavBar para remover Login e Register quando logar
 
+Aula 10 - Rotas Privadas
+
+Fazer o logout 
+Limpar o cache para o logout 
+
+No index do AuthContext
+Criar a funcao logout
+
+const logoutUser = () => {
+  setUserLogged(false);
+  localStorage.clear();
+  navigate('/login')
+}
+
+Rota privada no App.js
+ProectedRoute serve para proteger a home. 
+Rota home
+
+<Route path="/" element={
+<ProtectedRoute>
+   <Home />
+</ProtectedRoute>
+}/>
+
+
 
 
 

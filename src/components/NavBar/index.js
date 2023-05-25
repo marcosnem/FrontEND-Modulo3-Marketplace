@@ -10,7 +10,7 @@ import { MdLogout } from 'react-icons/md';
 
 const NavBar = () => {
 
-  const { userLogged }  = useContext(AuthContext);
+  const { userLogged, logoutUser }  = useContext(AuthContext);
   const navigate = useNavigate();
 
   console.log(`valor do contexto`, userLogged);
@@ -32,7 +32,7 @@ const NavBar = () => {
         </div>
           <img src="" alt=""/>
           <p className='text-gray-700'>Bem vindo, Nome</p>
-          <MdLogout className='w-6 h-6 cursor-pointer'/>
+          <MdLogout className='w-6 h-6 cursor-pointer'onClick={logoutUser}/>
         </div>
     
     ) : (

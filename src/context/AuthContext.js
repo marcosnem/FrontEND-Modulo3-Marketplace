@@ -12,7 +12,11 @@ const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
 
 //variavel de estado para verifi logon user
-const [ userLogged, setUserLogged ] = useState(false);  
+const [ userLogged, setUserLogged ] = useState(false); 
+
+//state para carregar a rota, enquanto ver o user ta logado 
+const [ loading, setLoading ] = useState(true);
+
 const navigate = useNavigate();
 
 //Quando o user tiver logado, o setUserLogged vai pra true
@@ -25,6 +29,9 @@ useEffect(() => {
     // }else {
     //   alert('Usuario nao logado');
     }
+
+    //se user logado, loading volta para false
+    setLoading(false);
 
 }, [])
 
@@ -48,9 +55,21 @@ console.log(data);
   navigate('/')
   setUserLogged(true);
 }
- 
+
+// Funcao logout
+const logoutUser = () => {
+  setUserLogged(false);
+  localStorage.clear();
+  navigate('/login')
+}
+
+//Enquanto carrega, exibe a palavra loading 
+if(loading) {
+  return <h1>Loading</h1>
+  }
+
 return (
-    <AuthContext.Provider value={{userLogged, loginUser}}> 
+    <AuthContext.Provider value={{userLogged, loginUser, logoutUser}}> 
      { children }
     </AuthContext.Provider>
   )
