@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import logo from '../../assets/logo.png'
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../context/AuthContext'
 
 const Login = () => {
 
   const [ inputValues, setInputValues ] = useState ({
     email:'',
     senha:''
-  });
+  })
+
+  const { loginUser } = useContext(AuthContext);
   
   // para redirecionar a pagina
   const navigate = useNavigate(); 
@@ -27,16 +30,8 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-     const response = await fetch('http://localhost:3000/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'       
-      },
-      body: JSON.stringify(inputValues)
-      
-    })
-    console.log(response);
-    navigate('/')
+    loginUser(inputValues);
+    
   }
 
   return (

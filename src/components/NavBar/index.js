@@ -8,10 +8,10 @@ import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
 
-  const userLogged  = useContext(AuthContext);
+  const { userLogged }  = useContext(AuthContext);
   const navigate = useNavigate();
 
-  console.log(`valor do contexto no nav bar`,userLogged);
+  console.log(`valor do contexto`, userLogged);
  
   return (
     // uso de classes do tailwindcss para estilizar

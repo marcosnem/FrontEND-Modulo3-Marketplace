@@ -5,7 +5,7 @@ import { AuthContext } from '../../context/AuthContext';
 const Home = () => {
 
   const userLogged = useContext(AuthContext);
-  console.log(`valor do contexto na home`, userLogged);
+  // console.log(`valor do contexto na home`, userLogged);
   
   return (
    <>
