@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const Login = () => {
 
   const [ inputValues, setInputValues ] = useState ({
-    email: '',
+    email:'',
     senha:''
   });
   
@@ -25,11 +25,18 @@ const Login = () => {
   console.log(inputValues);
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    alert(`Usuário ${inputValues.email} logado com sucesso.`)
-    // ir pra home depois do login
-    navigate('/');
+     const response = await fetch('http://localhost:3000/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'       
+      },
+      body: JSON.stringify(inputValues)
+      
+    })
+    console.log(response);
+    navigate('/')
   }
 
   return (

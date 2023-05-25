@@ -263,6 +263,34 @@ O contexto torna a variavel compartilhada para todos que estiverem dentro de sua
 
 Aula 06  - Fetch post login
 
+uso do navigate para acionar o onClick no botao login dentro do NavBar
+
+Fetch API faz requisicoes (tem dois parametros: RequestInfo/URL - e RequestInit - configs)
+
+no arquivo index do login linha 23 construido o Fetch
+
+erro de Requisição cross-origin bloqueada: A diretiva Same Origin (mesma origem) não permite a leitura do recurso remoto
+https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9
+
+ajuste no index do back-end
+app.use(cors(
+    {
+        // origin: [
+        //     "localhost:3001",
+        //     "localhost:3002"
+        // ],
+        header: ('Access-Control-Allow-Origin', '*'),
+        methods: ["GET","POST","PUT", "PATCH","DELETE"]
+    }
+));
+
+
+
+
+
+
+
+
 
 
 

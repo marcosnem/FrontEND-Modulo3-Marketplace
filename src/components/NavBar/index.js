@@ -2,12 +2,15 @@ import React from "react";
 import logo from "../../assets/logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 
 
 const NavBar = () => {
 
   const userLogged  = useContext(AuthContext);
+  const navigate = useNavigate();
+
   console.log(`valor do contexto no nav bar`,userLogged);
  
   return (
@@ -19,7 +22,7 @@ const NavBar = () => {
         <h1 className='text-center text-3xl font-semibold text-gray-700'>Food App</h1>
     </div>
     <div className='flex items-center justify-end space-x-6'>
-    <button>Login</button>
+    <button onClick={() => navigate('/login')}>Login</button>
     <button className='bg-primary px-6 text-white rounded-full transition duration-700 hover:scale-105'>Register</button>
     </div>
       </nav>
