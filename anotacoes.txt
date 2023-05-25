@@ -289,6 +289,27 @@ Aula 07  - Refatorando o Context
 todo o response do fecth do index login foi para o AuthContext dentro do loginuser
 
 Aula 08 - UseEffect
+salvar o login do usuario para mante-lo logado (estado)
+
+usando o localstorage
+
+localStorage.setItem('userInfo', JSON.stringify(data))
+
+Hook useEffect 
+Executa um efeito quando algo [é alterado
+
+useEffect(() => {
+  const userInfo = localStorage.getItem('userInfo');
+
+  if(userInfo) {
+    setUserLogged(true);
+    alert('Usuario logado');
+    }else {
+      alert('Usuario nao logado');
+    }
+
+}, [])
+
 
 
 
