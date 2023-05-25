@@ -284,6 +284,13 @@ app.use(cors(
     }
 ));
 
+Aula 07  - Refatorando o Context
+
+todo o response do fecth do index login foi para o AuthContext dentro do loginuser
+
+Aula 08 - UseEffect
+
+
 
 
 
