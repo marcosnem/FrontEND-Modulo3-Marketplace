@@ -21,9 +21,9 @@ useEffect(() => {
 
   if(userInfo) {
     setUserLogged(true);
-    alert('Usuario logado');
-    }else {
-      alert('Usuario nao logado');
+    // alert('Usuario logado');
+    // }else {
+    //   alert('Usuario nao logado');
     }
 
 }, [])

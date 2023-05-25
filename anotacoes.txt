@@ -296,7 +296,7 @@ usando o localstorage
 localStorage.setItem('userInfo', JSON.stringify(data))
 
 Hook useEffect 
-Executa um efeito quando algo [é alterado
+Executa um efeito quando algo é alterado
 
 useEffect(() => {
   const userInfo = localStorage.getItem('userInfo');
@@ -309,6 +309,22 @@ useEffect(() => {
     }
 
 }, [])
+
+Aula 09 - Menu, Navegacao e Pos Login
+
+Alteracoes no index do NavBar
+
+Entre as div do header
+
+Usar icones no React
+https://react-icons.github.io/react-icons/
+
+Instalar o Biblioteca de icones
+npm install react-icons --save
+
+Ajusta no NavBar para remover Login e Register quando logar
+
+
 
 
 
