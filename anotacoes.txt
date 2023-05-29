@@ -12,8 +12,7 @@ Permite aplicacao com varias se carregar as paginas
 site do react router
 https://reactrouter.com/en/main
 
-Instalando apos a criacao do app
-npx create-react-app nomedoapp
+Instalando apos a criacao do 
 
 npm install react-router-dom@6.4.2
 
@@ -409,6 +408,41 @@ Parte removida do AuthContext e inserida no useAuth
 //   navigate('/login')
 // }
 
+Introdução ao Redux e Comunicação Cliente-Servidor 
+
+Aula 01 - 
+
+Uso do Axios para a comunicao (REQ e RES)
+
+
+Redux [é uma biblioteca para armazenar os estados, action e tratar as actions
+
+Aula 02 - Instalacao e configuracao do Axios
+
+https://axios-http.com/ptbr/docs/intro
+
+npm install axios
+
+Subir uma instancia do Axios
+
+Criar pasta services e o arquivo api.js 
+
+Removido do useAuth a tarefa de fazer login
+
+Criar o authService.js dentro da services
+
+Remover do arquivo useAuth a parte do fetch
+fetch('http://localhost:3000/auth/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'       
+    },
+    body: JSON.stringify(inputValues)
+    
+  })
+
+  
+
 
 
 
@@ -435,6 +469,7 @@ Parte removida do AuthContext e inserida no useAuth
 
 
    
+
 
 
 

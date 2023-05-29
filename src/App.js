@@ -19,7 +19,7 @@ function App() {
                 <Home />
               </ProtectedRoute>
             }/>
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login/>} />
         </Routes>
       </AuthProvider>
     </>
