@@ -10,7 +10,7 @@ import { MdLogout } from 'react-icons/md';
 
 const NavBar = () => {
 
-  const { userLogged, logoutUser }  = useContext(AuthContext);
+  const { userLogged, userFull, logoutUser }  = useContext(AuthContext);
   const navigate = useNavigate();
 
   console.log(`valor do contexto`, userLogged);
@@ -31,14 +31,15 @@ const NavBar = () => {
           <BsFillCartFill className='w-6 h-6 cursor-pointer'/>
         </div>
           <img src="" alt=""/>
-          <p className='text-gray-700'>Bem vindo, Nome</p>
+          <p className='text-gray-700'>Bem vindo, { userFull.nome} !</p>
+          <img src={ userFull.imagem} className="w-10 h-10 rounded-full" alt=""/>
           <MdLogout className='w-6 h-6 cursor-pointer'onClick={logoutUser}/>
         </div>
     
     ) : (
       <div className='flex items-center justify-end space-x-6'>
       <button onClick={() => navigate('/login')}>Login</button>
-      <button className='bg-primary px-6 text-white rounded-full transition duration-700 hover:scale-105'>Register</button>
+      <button onClick={() => navigate('/register')} className='bg-primary px-6 text-white rounded-full transition duration-700 hover:scale-105'>Register</button>
       </div>
     )}    
     </nav>

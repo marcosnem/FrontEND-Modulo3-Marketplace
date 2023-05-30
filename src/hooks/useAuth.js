@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { loginUserApi } from '../services/authService';
+import { loginUserApi, getUserById } from '../services/authService';
+import api from "../services/api";
 
 
 const useAuth = () => {
@@ -10,13 +11,25 @@ const useAuth = () => {
   //state para carregar a rota, enquanto ver o user ta logado
   const [loading, setLoading] = useState(true);
 
+  // receber a resposta do servidor
+  const [ userFull, setUserFull ] = useState({});
+
+  // // estado para a armazenar o id 
+  // const [ userId, setUserId] = useState('');
+
+
+
   const navigate = useNavigate();
 
   //Quando o user tiver logado, o setUserLogged vai pra true
   useEffect(() => {
-    const userInfo = localStorage.getItem("userInfo");
+    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+
+    console.log(userInfo);
 
     if (userInfo) {
+      api.defaults.headers.common['Authorization'] = `Bearer ${userInfo.token}`
+      findUserById(userInfo.id);
       setUserLogged(true);
       }
 
@@ -28,8 +41,10 @@ const useAuth = () => {
     //uso a api para login
     const response = await loginUserApi(inputValues);
     const data = await response.data;
-    console.log(data);
+    
     localStorage.setItem('userInfo', JSON.stringify(data))
+    //setar configuracoes de headers para autenticar as chamadas
+    api.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`
     navigate('/')
     setUserLogged(true);
   }
@@ -41,7 +56,15 @@ const useAuth = () => {
     navigate("/login");
   };
 
-  return { userLogged, loading, loginUser, logoutUser };
+  const findUserById = async (idUser) => {
+    const response = await getUserById(idUser);
+    setUserFull(response.data);
+
+    console.log(userFull);
+
+  }
+
+  return { userLogged, userFull, loading, loginUser, logoutUser };
 };
 
 export default useAuth;

@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import Login from "./pages/Login/";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               </ProtectedRoute>
             }/>
           <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Register/>} />
         </Routes>
       </AuthProvider>
     </>

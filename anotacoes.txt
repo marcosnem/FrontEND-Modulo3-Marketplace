@@ -441,7 +441,25 @@ fetch('http://localhost:3000/auth/login', {
     
   })
 
+Erro era o servico do mongo db nao iniciado
+
+Aula 03 Cadastro Usuário
+
+Construcao do Register
+
+Uso URL da imagem no site 
+https://www.flaticon.com/br/
+
   
+Aula 04 - Rotas Autenticadas
+
+Criacao do getUserById no services > authService.js
+
+criacao do findById
+
+alteracao do navbar para capturar o nome e imagem do usuario logado
+
+adicionado o userFull no AuthContext para disponibilizar-lo em todas as rotas
 
 
 
@@ -454,8 +472,7 @@ fetch('http://localhost:3000/auth/login', {
 
 
 
-
-
+ 
 
 
 

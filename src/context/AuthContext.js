@@ -7,7 +7,7 @@ const AuthContext = createContext();
 
 //Componente de contexto 
 const AuthProvider = ({ children }) => {
-const { userLogged, loading, loginUser, logoutUser } = useAuth();
+const { userLogged, userFull, loading, loginUser, logoutUser } = useAuth();
 
 //Enquanto carrega, exibe a palavra loading 
 if(loading) {
@@ -15,7 +15,7 @@ if(loading) {
   }
 
 return (
-    <AuthContext.Provider value={{ userLogged, loginUser, logoutUser}}> 
+    <AuthContext.Provider value={{ userLogged, userFull, loginUser, logoutUser}}> 
      { children }
     </AuthContext.Provider>
   )
