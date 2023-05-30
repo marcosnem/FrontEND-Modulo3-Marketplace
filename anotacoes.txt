@@ -461,6 +461,16 @@ alteracao do navbar para capturar o nome e imagem do usuario logado
 
 adicionado o userFull no AuthContext para disponibilizar-lo em todas as rotas
 
+Aula 05 - Tela de admin
+
+Criacao da page admin
+
+navbar com acesso ao admin
+
+feito uma table com produtos ficticios
+
+acao no botao adicionar produtos
+
 
 
 

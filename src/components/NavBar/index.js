@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsFillCartFill } from 'react-icons/bs';
 import { MdLogout } from 'react-icons/md';
 
@@ -32,6 +32,7 @@ const NavBar = () => {
         </div>
           <img src="" alt=""/>
           <p className='text-gray-700'>Bem vindo, { userFull.nome} !</p>
+          <Link to='/admin'>Admin</Link>
           <img src={ userFull.imagem} className="w-10 h-10 rounded-full" alt=""/>
           <MdLogout className='w-6 h-6 cursor-pointer'onClick={logoutUser}/>
         </div>

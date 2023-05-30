@@ -6,6 +6,8 @@ import Login from "./pages/Login/";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import Register from "./pages/Register";
+import Admin from "./pages/Admin";
+import AddProduct from "./pages/AddProduct";
 
 function App() {
   return (
@@ -14,14 +16,23 @@ function App() {
       <AuthProvider>
         <NavBar />
         <Routes>
-          <Route
-            path="/" element={
+          <Route path="/" element={
               <ProtectedRoute>
                 <Home />
               </ProtectedRoute>
             }/>
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
+          <Route path="/admin" element={
+          <ProtectedRoute>
+          <Admin/> 
+          </ProtectedRoute>
+          }/>
+           <Route path="/add-product" element={
+          <ProtectedRoute>
+          <AddProduct/> 
+          </ProtectedRoute>
+          }/>
         </Routes>
       </AuthProvider>
     </>
